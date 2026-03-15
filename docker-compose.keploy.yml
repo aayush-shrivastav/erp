@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  backend-recorded:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: erp-backend-keploy
+    ports:
+      - "5001:5001"
+    environment:
+      - DATABASE_URL=postgresql://root:rootpassword@db:5432/college_erp?schema=public
+      - PORT=5001
+      - JWT_SECRET=your-super-secret-jwt-key
+      - NODE_ENV=development
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+    # This is where the magic happens: keploy record
+    command: /usr/local/bin/keploy-bin record -c "npm start"
+
+  db:
+    image: postgres:15
+    container_name: college_erp_db
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=rootpassword
+      - POSTGRES_DB=college_erp
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

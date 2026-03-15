@@ -1,0 +1,40 @@
+﻿
+> frontend@1.0.0 test
+> jest
+
+node.exe : ΓùÅ 
+Validation Error:
+At C:\Users\aayus\AppD
+ata\Roaming\npm\npm.ps
+1:24 char:5
++     & "node$exe"  "$
+basedir/node_modules/n
+pm/bin/npm-cli.js" 
+$args
++     ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (ΓùÅ Valida   
+ tion Error::Strin    
+g) [], RemoteExce    
+ption
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+
+  Module jest-junit 
+in the 
+testResultsProcessor 
+option was not found.
+         <rootDir> 
+is: D:\kkkk\frontend
+
+  Configuration 
+Documentation:
+  https://jestjs.io/do
+cs/configuration
+

@@ -1,0 +1,1760 @@
+﻿
+> frontend@1.0.0 test
+> jest
+
+node.exe : FAIL __test
+s__/Login.test.jsx
+At C:\Users\aayus\AppD
+ata\Roaming\npm\npm.ps
+1:24 char:5
++     & "node$exe"  "$
+basedir/node_modules/n
+pm/bin/npm-cli.js" 
+$args
++     ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (FAIL __tes   
+ ts__/Login.test.j    
+sx:String) [], Re    
+moteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+  ΓùÅ Test suite 
+failed to run
+
+    ReferenceError: 
+TextEncoder is not 
+defined
+
+    [0m [90m 1 
+|[39m 
+[36mimport[39m 
+[33mReact[39m 
+[36mfrom[39m [32m'r
+eact'[39m[33m;[39m
+     [90m 2 |[39m 
+[36mimport[39m { 
+render[33m,[39m 
+screen[33m,[39m 
+fireEvent[33m,[39m 
+waitFor } 
+[36mfrom[39m [32m'@
+testing-library/react'
+[39m[33m;[39m
+    [31m[1m>[22m[3
+9m[90m 3 |[39m 
+[36mimport[39m { [3
+3mBrowserRouter[39m 
+} [36mfrom[39m [32m
+'react-router-dom'[39
+m[33m;[39m
+     [90m   |[39m 
+[31m[1m^[22m[39m
+     [90m 4 |[39m 
+[36mimport[39m 
+[33mLogin[39m 
+[36mfrom[39m [32m'.
+./src/pages/Login'[39
+m[33m;[39m [90m// 
+Adjust path if 
+needed[39m
+     [90m 5 |[39m 
+[36mimport[39m 
+[33m*[39m 
+[36mas[39m api 
+[36mfrom[39m [32m'.
+./src/services/api'[3
+9m[33m;[39m [90m// 
+Mock API[39m
+     [90m 6 
+|[39m[0m
+
+      at 
+Object.<anonymous> (no
+de_modules/react-route
+r/dist/development/ind
+ex.js:342:31)
+      at 
+Object.<anonymous> (no
+de_modules/react-route
+r/dist/development/dom
+-export.js:40:20)
+      at 
+Object.<anonymous> (no
+de_modules/react-route
+r-dom/dist/index.js:38
+:18)
+      at 
+Object.require (__test
+s__/Login.test.jsx:3:1
+)
+
+FAIL src/components/ui
+/Badge.test.jsx
+  ΓùÅ Badge Component 
+ΓÇ║ renders with 
+children correctly
+
+    ReferenceError: 
+React is not defined
+
+    [0m [90m 27 
+|[39m     
+}[33m;[39m
+     [90m 28 |[39m
+    [31m[1m>[22m[3
+9m[90m 29 |[39m     
+[36mreturn[39m (
+     [90m    |[39m  
+   
+[31m[1m^[22m[39m
+     [90m 30 |[39m  
+       [33m<[39m[33
+mspan[39m className[
+33m=[39m{[32m`inline
+-flex items-center 
+px-2.5 py-0.5 
+rounded-full 
+text-[10px] font-bold 
+uppercase 
+tracking-wider ${varia
+nts[variant.toLowerCas
+e()] || 
+variants.neutral} ${cl
+assName}`[39m}[33m>
+[39m
+     [90m 31 |[39m  
+           {children}
+     [90m 32 |[39m  
+       [33m<[39m[33
+m/[39m[33mspan[39m
+[33m>[39m[0m
+
+      at Badge (src/co
+mponents/ui/Badge.jsx:
+29:5)
+      at Object.react_
+stack_bottom_frame (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:25904:20)
+      at 
+renderWithHooks (node_
+modules/react-dom/cjs/
+react-dom-client.devel
+opment.js:7662:22)
+      at updateFunctio
+nComponent (node_modul
+es/react-dom/cjs/react
+-dom-client.developmen
+t.js:10166:19)
+      at beginWork (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:11778:18)
+      at 
+runWithFiberInDEV (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:874:13)
+      at 
+performUnitOfWork (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:17641:22)
+      at workLoopSync 
+(node_modules/react-do
+m/cjs/react-dom-client
+.development.js:17469:
+41)
+      at 
+renderRootSync (node_m
+odules/react-dom/cjs/r
+eact-dom-client.develo
+pment.js:17450:11)
+      at 
+performWorkOnRoot (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:16583:35)
+      at performWorkOn
+RootViaSchedulerTask (
+node_modules/react-dom
+/cjs/react-dom-client.
+development.js:18957:7
+)
+      at 
+flushActQueue (node_mo
+dules/react/cjs/react.
+development.js:590:34)
+      at process.env.N
+ODE_ENV.exports.act (n
+ode_modules/react/cjs/
+react.development.js:8
+84:10)
+      at node_modules/
+@testing-library/react
+/dist/act-compat.js:46
+:25
+      at renderRoot (n
+ode_modules/@testing-l
+ibrary/react/dist/pure
+.js:189:26)
+      at render (node_
+modules/@testing-libra
+ry/react/dist/pure.js:
+291:10)
+      at 
+Object.<anonymous> (sr
+c/components/ui/Badge.
+test.jsx:7:11)
+
+  ΓùÅ Badge Component 
+ΓÇ║ applies correct 
+class for different 
+variants
+
+    ReferenceError: 
+React is not defined
+
+    [0m [90m 27 
+|[39m     
+}[33m;[39m
+     [90m 28 |[39m
+    [31m[1m>[22m[3
+9m[90m 29 |[39m     
+[36mreturn[39m (
+     [90m    |[39m  
+   
+[31m[1m^[22m[39m
+     [90m 30 |[39m  
+       [33m<[39m[33
+mspan[39m className[
+33m=[39m{[32m`inline
+-flex items-center 
+px-2.5 py-0.5 
+rounded-full 
+text-[10px] font-bold 
+uppercase 
+tracking-wider ${varia
+nts[variant.toLowerCas
+e()] || 
+variants.neutral} ${cl
+assName}`[39m}[33m>
+[39m
+     [90m 31 |[39m  
+           {children}
+     [90m 32 |[39m  
+       [33m<[39m[33
+m/[39m[33mspan[39m
+[33m>[39m[0m
+
+      at Badge (src/co
+mponents/ui/Badge.jsx:
+29:5)
+      at Object.react_
+stack_bottom_frame (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:25904:20)
+      at 
+renderWithHooks (node_
+modules/react-dom/cjs/
+react-dom-client.devel
+opment.js:7662:22)
+      at updateFunctio
+nComponent (node_modul
+es/react-dom/cjs/react
+-dom-client.developmen
+t.js:10166:19)
+      at beginWork (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:11778:18)
+      at 
+runWithFiberInDEV (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:874:13)
+      at 
+performUnitOfWork (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:17641:22)
+      at workLoopSync 
+(node_modules/react-do
+m/cjs/react-dom-client
+.development.js:17469:
+41)
+      at 
+renderRootSync (node_m
+odules/react-dom/cjs/r
+eact-dom-client.develo
+pment.js:17450:11)
+      at 
+performWorkOnRoot (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:16583:35)
+      at performWorkOn
+RootViaSchedulerTask (
+node_modules/react-dom
+/cjs/react-dom-client.
+development.js:18957:7
+)
+      at 
+flushActQueue (node_mo
+dules/react/cjs/react.
+development.js:590:34)
+      at process.env.N
+ODE_ENV.exports.act (n
+ode_modules/react/cjs/
+react.development.js:8
+84:10)
+      at node_modules/
+@testing-library/react
+/dist/act-compat.js:46
+:25
+      at renderRoot (n
+ode_modules/@testing-l
+ibrary/react/dist/pure
+.js:189:26)
+      at render (node_
+modules/@testing-libra
+ry/react/dist/pure.js:
+291:10)
+      at 
+Object.<anonymous> (sr
+c/components/ui/Badge.
+test.jsx:12:32)
+
+  ΓùÅ Badge Component 
+ΓÇ║ defaults to 
+neutral variant for 
+unknown variants
+
+    ReferenceError: 
+React is not defined
+
+    [0m [90m 27 
+|[39m     
+}[33m;[39m
+     [90m 28 |[39m
+    [31m[1m>[22m[3
+9m[90m 29 |[39m     
+[36mreturn[39m (
+     [90m    |[39m  
+   
+[31m[1m^[22m[39m
+     [90m 30 |[39m  
+       [33m<[39m[33
+mspan[39m className[
+33m=[39m{[32m`inline
+-flex items-center 
+px-2.5 py-0.5 
+rounded-full 
+text-[10px] font-bold 
+uppercase 
+tracking-wider ${varia
+nts[variant.toLowerCas
+e()] || 
+variants.neutral} ${cl
+assName}`[39m}[33m>
+[39m
+     [90m 31 |[39m  
+           {children}
+     [90m 32 |[39m  
+       [33m<[39m[33
+m/[39m[33mspan[39m
+[33m>[39m[0m
+
+      at Badge (src/co
+mponents/ui/Badge.jsx:
+29:5)
+      at Object.react_
+stack_bottom_frame (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:25904:20)
+      at 
+renderWithHooks (node_
+modules/react-dom/cjs/
+react-dom-client.devel
+opment.js:7662:22)
+      at updateFunctio
+nComponent (node_modul
+es/react-dom/cjs/react
+-dom-client.developmen
+t.js:10166:19)
+      at beginWork (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:11778:18)
+      at 
+runWithFiberInDEV (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:874:13)
+      at 
+performUnitOfWork (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:17641:22)
+      at workLoopSync 
+(node_modules/react-do
+m/cjs/react-dom-client
+.development.js:17469:
+41)
+      at 
+renderRootSync (node_m
+odules/react-dom/cjs/r
+eact-dom-client.develo
+pment.js:17450:11)
+      at 
+performWorkOnRoot (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:16583:35)
+      at performWorkOn
+RootViaSchedulerTask (
+node_modules/react-dom
+/cjs/react-dom-client.
+development.js:18957:7
+)
+      at 
+flushActQueue (node_mo
+dules/react/cjs/react.
+development.js:590:34)
+      at process.env.N
+ODE_ENV.exports.act (n
+ode_modules/react/cjs/
+react.development.js:8
+84:10)
+      at node_modules/
+@testing-library/react
+/dist/act-compat.js:46
+:25
+      at renderRoot (n
+ode_modules/@testing-l
+ibrary/react/dist/pure
+.js:189:26)
+      at render (node_
+modules/@testing-libra
+ry/react/dist/pure.js:
+291:10)
+      at 
+Object.<anonymous> (sr
+c/components/ui/Badge.
+test.jsx:26:11)
+
+FAIL src/components/ui
+/Button.test.jsx
+  ΓùÅ Button 
+Component ΓÇ║ renders 
+children correctly
+
+    ReferenceError: 
+React is not defined
+
+    [0m [90m 37 
+|[39m         
+[33m:[39m 
+[32m'inline-flex 
+items-center 
+justify-center gap-2 
+rounded-xl 
+transition-all 
+duration-150 
+active:scale-[0.97] 
+shadow-sm 
+hover:shadow 
+active:shadow-none 
+disabled:opacity-50 di
+sabled:cursor-not-allo
+wed'[39m[33m;[39m
+     [90m 38 |[39m
+    [31m[1m>[22m[3
+9m[90m 39 |[39m     
+[36mreturn[39m (
+     [90m    |[39m  
+   
+[31m[1m^[22m[39m
+     [90m 40 |[39m  
+       [33m<[39m[33
+mbutton[39m
+     [90m 41 |[39m  
+           className[
+33m=[39m{[32m`${base
+Classes} 
+${variants[variant]} 
+${variant !== 'ghost' 
+? sizes[size] : ''} 
+${className}`[39m}
+     [90m 42 |[39m  
+           disabled[3
+3m=[39m{disabled 
+[33m||[39m 
+isLoading}[0m
+
+      at Button (src/c
+omponents/ui/Button.js
+x:39:5)
+      at Object.react_
+stack_bottom_frame (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:25904:20)
+      at 
+renderWithHooks (node_
+modules/react-dom/cjs/
+react-dom-client.devel
+opment.js:7662:22)
+      at updateFunctio
+nComponent (node_modul
+es/react-dom/cjs/react
+-dom-client.developmen
+t.js:10166:19)
+      at beginWork (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:11778:18)
+      at 
+runWithFiberInDEV (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:874:13)
+      at 
+performUnitOfWork (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:17641:22)
+      at workLoopSync 
+(node_modules/react-do
+m/cjs/react-dom-client
+.development.js:17469:
+41)
+      at 
+renderRootSync (node_m
+odules/react-dom/cjs/r
+eact-dom-client.develo
+pment.js:17450:11)
+      at 
+performWorkOnRoot (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:16583:35)
+      at performWorkOn
+RootViaSchedulerTask (
+node_modules/react-dom
+/cjs/react-dom-client.
+development.js:18957:7
+)
+      at 
+flushActQueue (node_mo
+dules/react/cjs/react.
+development.js:590:34)
+      at process.env.N
+ODE_ENV.exports.act (n
+ode_modules/react/cjs/
+react.development.js:8
+84:10)
+      at node_modules/
+@testing-library/react
+/dist/act-compat.js:46
+:25
+      at renderRoot (n
+ode_modules/@testing-l
+ibrary/react/dist/pure
+.js:189:26)
+      at render (node_
+modules/@testing-libra
+ry/react/dist/pure.js:
+291:10)
+      at 
+Object.<anonymous> (sr
+c/components/ui/Button
+.test.jsx:7:11)
+
+  ΓùÅ Button 
+Component ΓÇ║ calls 
+onClick handler when 
+clicked
+
+    ReferenceError: 
+React is not defined
+
+    [0m [90m 37 
+|[39m         
+[33m:[39m 
+[32m'inline-flex 
+items-center 
+justify-center gap-2 
+rounded-xl 
+transition-all 
+duration-150 
+active:scale-[0.97] 
+shadow-sm 
+hover:shadow 
+active:shadow-none 
+disabled:opacity-50 di
+sabled:cursor-not-allo
+wed'[39m[33m;[39m
+     [90m 38 |[39m
+    [31m[1m>[22m[3
+9m[90m 39 |[39m     
+[36mreturn[39m (
+     [90m    |[39m  
+   
+[31m[1m^[22m[39m
+     [90m 40 |[39m  
+       [33m<[39m[33
+mbutton[39m
+     [90m 41 |[39m  
+           className[
+33m=[39m{[32m`${base
+Classes} 
+${variants[variant]} 
+${variant !== 'ghost' 
+? sizes[size] : ''} 
+${className}`[39m}
+     [90m 42 |[39m  
+           disabled[3
+3m=[39m{disabled 
+[33m||[39m 
+isLoading}[0m
+
+      at Button (src/c
+omponents/ui/Button.js
+x:39:5)
+      at Object.react_
+stack_bottom_frame (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:25904:20)
+      at 
+renderWithHooks (node_
+modules/react-dom/cjs/
+react-dom-client.devel
+opment.js:7662:22)
+      at updateFunctio
+nComponent (node_modul
+es/react-dom/cjs/react
+-dom-client.developmen
+t.js:10166:19)
+      at beginWork (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:11778:18)
+      at 
+runWithFiberInDEV (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:874:13)
+      at 
+performUnitOfWork (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:17641:22)
+      at workLoopSync 
+(node_modules/react-do
+m/cjs/react-dom-client
+.development.js:17469:
+41)
+      at 
+renderRootSync (node_m
+odules/react-dom/cjs/r
+eact-dom-client.develo
+pment.js:17450:11)
+      at 
+performWorkOnRoot (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:16583:35)
+      at performWorkOn
+RootViaSchedulerTask (
+node_modules/react-dom
+/cjs/react-dom-client.
+development.js:18957:7
+)
+      at 
+flushActQueue (node_mo
+dules/react/cjs/react.
+development.js:590:34)
+      at process.env.N
+ODE_ENV.exports.act (n
+ode_modules/react/cjs/
+react.development.js:8
+84:10)
+      at node_modules/
+@testing-library/react
+/dist/act-compat.js:46
+:25
+      at renderRoot (n
+ode_modules/@testing-l
+ibrary/react/dist/pure
+.js:189:26)
+      at render (node_
+modules/@testing-libra
+ry/react/dist/pure.js:
+291:10)
+      at 
+Object.<anonymous> (sr
+c/components/ui/Button
+.test.jsx:13:11)
+
+  ΓùÅ Button 
+Component ΓÇ║ is 
+disabled when the 
+disabled prop is true
+
+    ReferenceError: 
+React is not defined
+
+    [0m [90m 37 
+|[39m         
+[33m:[39m 
+[32m'inline-flex 
+items-center 
+justify-center gap-2 
+rounded-xl 
+transition-all 
+duration-150 
+active:scale-[0.97] 
+shadow-sm 
+hover:shadow 
+active:shadow-none 
+disabled:opacity-50 di
+sabled:cursor-not-allo
+wed'[39m[33m;[39m
+     [90m 38 |[39m
+    [31m[1m>[22m[3
+9m[90m 39 |[39m     
+[36mreturn[39m (
+     [90m    |[39m  
+   
+[31m[1m^[22m[39m
+     [90m 40 |[39m  
+       [33m<[39m[33
+mbutton[39m
+     [90m 41 |[39m  
+           className[
+33m=[39m{[32m`${base
+Classes} 
+${variants[variant]} 
+${variant !== 'ghost' 
+? sizes[size] : ''} 
+${className}`[39m}
+     [90m 42 |[39m  
+           disabled[3
+3m=[39m{disabled 
+[33m||[39m 
+isLoading}[0m
+
+      at Button (src/c
+omponents/ui/Button.js
+x:39:5)
+      at Object.react_
+stack_bottom_frame (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:25904:20)
+      at 
+renderWithHooks (node_
+modules/react-dom/cjs/
+react-dom-client.devel
+opment.js:7662:22)
+      at updateFunctio
+nComponent (node_modul
+es/react-dom/cjs/react
+-dom-client.developmen
+t.js:10166:19)
+      at beginWork (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:11778:18)
+      at 
+runWithFiberInDEV (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:874:13)
+      at 
+performUnitOfWork (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:17641:22)
+      at workLoopSync 
+(node_modules/react-do
+m/cjs/react-dom-client
+.development.js:17469:
+41)
+      at 
+renderRootSync (node_m
+odules/react-dom/cjs/r
+eact-dom-client.develo
+pment.js:17450:11)
+      at 
+performWorkOnRoot (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:16583:35)
+      at performWorkOn
+RootViaSchedulerTask (
+node_modules/react-dom
+/cjs/react-dom-client.
+development.js:18957:7
+)
+      at 
+flushActQueue (node_mo
+dules/react/cjs/react.
+development.js:590:34)
+      at process.env.N
+ODE_ENV.exports.act (n
+ode_modules/react/cjs/
+react.development.js:8
+84:10)
+      at node_modules/
+@testing-library/react
+/dist/act-compat.js:46
+:25
+      at renderRoot (n
+ode_modules/@testing-l
+ibrary/react/dist/pure
+.js:189:26)
+      at render (node_
+modules/@testing-libra
+ry/react/dist/pure.js:
+291:10)
+      at 
+Object.<anonymous> (sr
+c/components/ui/Button
+.test.jsx:19:11)
+
+  ΓùÅ Button 
+Component ΓÇ║ shows 
+loading spinner and 
+is disabled when 
+isLoading is true
+
+    ReferenceError: 
+React is not defined
+
+    [0m [90m 37 
+|[39m         
+[33m:[39m 
+[32m'inline-flex 
+items-center 
+justify-center gap-2 
+rounded-xl 
+transition-all 
+duration-150 
+active:scale-[0.97] 
+shadow-sm 
+hover:shadow 
+active:shadow-none 
+disabled:opacity-50 di
+sabled:cursor-not-allo
+wed'[39m[33m;[39m
+     [90m 38 |[39m
+    [31m[1m>[22m[3
+9m[90m 39 |[39m     
+[36mreturn[39m (
+     [90m    |[39m  
+   
+[31m[1m^[22m[39m
+     [90m 40 |[39m  
+       [33m<[39m[33
+mbutton[39m
+     [90m 41 |[39m  
+           className[
+33m=[39m{[32m`${base
+Classes} 
+${variants[variant]} 
+${variant !== 'ghost' 
+? sizes[size] : ''} 
+${className}`[39m}
+     [90m 42 |[39m  
+           disabled[3
+3m=[39m{disabled 
+[33m||[39m 
+isLoading}[0m
+
+      at Button (src/c
+omponents/ui/Button.js
+x:39:5)
+      at Object.react_
+stack_bottom_frame (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:25904:20)
+      at 
+renderWithHooks (node_
+modules/react-dom/cjs/
+react-dom-client.devel
+opment.js:7662:22)
+      at updateFunctio
+nComponent (node_modul
+es/react-dom/cjs/react
+-dom-client.developmen
+t.js:10166:19)
+      at beginWork (no
+de_modules/react-dom/c
+js/react-dom-client.de
+velopment.js:11778:18)
+      at 
+runWithFiberInDEV (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:874:13)
+      at 
+performUnitOfWork (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:17641:22)
+      at workLoopSync 
+(node_modules/react-do
+m/cjs/react-dom-client
+.development.js:17469:
+41)
+      at 
+renderRootSync (node_m
+odules/react-dom/cjs/r
+eact-dom-client.develo
+pment.js:17450:11)
+      at 
+performWorkOnRoot (nod
+e_modules/react-dom/cj
+s/react-dom-client.dev
+elopment.js:16583:35)
+      at performWorkOn
+RootViaSchedulerTask (
+node_modules/react-dom
+/cjs/react-dom-client.
+development.js:18957:7
+)
+      at 
+flushActQueue (node_mo
+dules/react/cjs/react.
+development.js:590:34)
+      at process.env.N
+ODE_ENV.exports.act (n
+ode_modules/react/cjs/
+react.development.js:8
+84:10)
+      at node_modules/
+@testing-library/react
+/dist/act-compat.js:46
+:25
+      at renderRoot (n
+ode_modules/@testing-l
+ibrary/react/dist/pure
+.js:189:26)
+      at render (node_
+modules/@testing-libra
+ry/react/dist/pure.js:
+291:10)
+      at 
+Object.<anonymous> (sr
+c/components/ui/Button
+.test.jsx:24:11)
+
+FAIL __tests__/Modal.t
+est.jsx
+  ΓùÅ Modal ΓÇ║ calls 
+onClose on backdrop 
+click
+
+    expect(jest.fn()).
+toHaveBeenCalledTimes(
+expected)
+
+    Expected number 
+of calls: 1
+    Received number 
+of calls: 0
+
+    [0m [90m 30 
+|[39m     
+)[33m;[39m
+     [90m 31 |[39m  
+   fireEvent[33m.[39
+mclick(document[33m.
+[39mbody)[33m;[39m 
+[90m// backdrop[39m
+    [31m[1m>[22m[3
+9m[90m 32 |[39m     
+expect(onClose)[33m.
+[39mtoHaveBeenCalledTi
+mes([35m1[39m)[33m;
+[39m
+     [90m    |[39m  
+                   
+[31m[1m^[22m[39m
+     [90m 33 |[39m  
+ })[33m;[39m
+     [90m 34 |[39m
+     [90m 35 |[39m  
+ test([32m'does not 
+call onClose on 
+content click'[39m[3
+3m,[39m () 
+[33m=>[39m {[0m
+
+      at Object.toHave
+BeenCalledTimes (__tes
+ts__/Modal.test.jsx:32
+:21)
+
+FAIL tests/student/stu
+dent.spec.js
+  ΓùÅ Test suite 
+failed to run
+
+    TypeError: Class 
+extends value 
+undefined is not a 
+constructor or null
+
+    [0m[31m[1m>[22
+m[39m[90m 1 |[39m 
+[36mimport[39m { 
+test[33m,[39m 
+expect } 
+[36mfrom[39m [32m'@
+playwright/test'[39m
+[33m;[39m
+     [90m   |[39m 
+[31m[1m^[22m[39m
+     [90m 2 |[39m
+     [90m 3 |[39m 
+[90m/**[39m
+     [90m 4 |[39m 
+[90m * Student 
+Portal Tests[39m[0m
+
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundleImpl
+/index.js:119:3983)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundle.js:
+49:22)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/utils/
+nodePlatform.js:45:24)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/utils.js:56:2
+7)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/regist
+ry/index.js:48:20)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/index.
+js:37:23)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightConnection.js:24:2
+1)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightServer.js:24:35)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/androidServer
+Impl.js:24:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inProcessFact
+ory.js:24:32)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inprocess.js:
+2:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/index.js:32:18)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+lib/index.js:41:33)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+test.js:17:13)
+      at 
+Object.<anonymous> (no
+de_modules/@playwright
+/test/index.js:17:18)
+      at 
+Object.require (tests/
+student/student.spec.j
+s:1:1)
+
+FAIL tests/faculty/fac
+ulty.spec.js
+  ΓùÅ Test suite 
+failed to run
+
+    TypeError: Class 
+extends value 
+undefined is not a 
+constructor or null
+
+    [0m[31m[1m>[22
+m[39m[90m 1 |[39m 
+[36mimport[39m { 
+test[33m,[39m 
+expect } 
+[36mfrom[39m [32m'@
+playwright/test'[39m
+[33m;[39m
+     [90m   |[39m 
+[31m[1m^[22m[39m
+     [90m 2 |[39m
+     [90m 3 |[39m 
+[90m/**[39m
+     [90m 4 |[39m 
+[90m * Faculty 
+Portal Tests[39m[0m
+
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundleImpl
+/index.js:119:3983)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundle.js:
+49:22)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/utils/
+nodePlatform.js:45:24)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/utils.js:56:2
+7)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/regist
+ry/index.js:48:20)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/index.
+js:37:23)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightConnection.js:24:2
+1)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightServer.js:24:35)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/androidServer
+Impl.js:24:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inProcessFact
+ory.js:24:32)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inprocess.js:
+2:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/index.js:32:18)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+lib/index.js:41:33)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+test.js:17:13)
+      at 
+Object.<anonymous> (no
+de_modules/@playwright
+/test/index.js:17:18)
+      at 
+Object.require (tests/
+faculty/faculty.spec.j
+s:1:1)
+
+FAIL e2e/student-workf
+low.spec.js
+  ΓùÅ Test suite 
+failed to run
+
+    TypeError: Class 
+extends value 
+undefined is not a 
+constructor or null
+
+    [0m [90m 1 
+|[39m [90m// 
+Playwright E2E: Admin 
+Student Workflow[39m
+    [31m[1m>[22m[3
+9m[90m 2 |[39m 
+[36mimport[39m { 
+test[33m,[39m 
+expect } 
+[36mfrom[39m [32m'@
+playwright/test'[39m
+[33m;[39m
+     [90m   |[39m 
+[31m[1m^[22m[39m
+     [90m 3 |[39m
+     [90m 4 |[39m te
+st[33m.[39mdescribe(
+[32m'Student 
+Management Workflow'[
+39m[33m,[39m () 
+[33m=>[39m {
+     [90m 5 |[39m   
+test([32m'Admin 
+login and create stude
+nt'[39m[33m,[39m 
+[36masync[39m ({ 
+page }) [33m=>[39m 
+{[0m
+
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundleImpl
+/index.js:119:3983)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundle.js:
+49:22)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/utils/
+nodePlatform.js:45:24)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/utils.js:56:2
+7)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/regist
+ry/index.js:48:20)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/index.
+js:37:23)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightConnection.js:24:2
+1)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightServer.js:24:35)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/androidServer
+Impl.js:24:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inProcessFact
+ory.js:24:32)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inprocess.js:
+2:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/index.js:32:18)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+lib/index.js:41:33)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+test.js:17:13)
+      at 
+Object.<anonymous> (no
+de_modules/@playwright
+/test/index.js:17:18)
+      at 
+Object.require (e2e/st
+udent-workflow.spec.js
+:2:1)
+
+FAIL tests/auth/auth.s
+pec.js
+  ΓùÅ Test suite 
+failed to run
+
+    TypeError: Class 
+extends value 
+undefined is not a 
+constructor or null
+
+    [0m[31m[1m>[22
+m[39m[90m 1 |[39m 
+[36mimport[39m { 
+test[33m,[39m 
+expect } 
+[36mfrom[39m [32m'@
+playwright/test'[39m
+[33m;[39m
+     [90m   |[39m 
+[31m[1m^[22m[39m
+     [90m 2 |[39m
+     [90m 3 |[39m 
+[90m/**[39m
+     [90m 4 |[39m 
+[90m * 
+Authentication 
+Tests[39m[0m
+
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundleImpl
+/index.js:119:3983)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundle.js:
+49:22)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/utils/
+nodePlatform.js:45:24)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/utils.js:56:2
+7)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/regist
+ry/index.js:48:20)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/index.
+js:37:23)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightConnection.js:24:2
+1)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightServer.js:24:35)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/androidServer
+Impl.js:24:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inProcessFact
+ory.js:24:32)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inprocess.js:
+2:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/index.js:32:18)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+lib/index.js:41:33)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+test.js:17:13)
+      at 
+Object.<anonymous> (no
+de_modules/@playwright
+/test/index.js:17:18)
+      at 
+Object.require (tests/
+auth/auth.spec.js:1:1)
+
+FAIL tests/accountant/
+accountant.spec.js
+  ΓùÅ Test suite 
+failed to run
+
+    TypeError: Class 
+extends value 
+undefined is not a 
+constructor or null
+
+    [0m[31m[1m>[22
+m[39m[90m 1 |[39m 
+[36mimport[39m { 
+test[33m,[39m 
+expect } 
+[36mfrom[39m [32m'@
+playwright/test'[39m
+[33m;[39m
+     [90m   |[39m 
+[31m[1m^[22m[39m
+     [90m 2 |[39m
+     [90m 3 |[39m 
+[90m/**[39m
+     [90m 4 |[39m 
+[90m * Accountant 
+Portal Tests[39m[0m
+
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundleImpl
+/index.js:119:3983)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundle.js:
+49:22)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/utils/
+nodePlatform.js:45:24)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/utils.js:56:2
+7)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/regist
+ry/index.js:48:20)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/index.
+js:37:23)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightConnection.js:24:2
+1)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightServer.js:24:35)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/androidServer
+Impl.js:24:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inProcessFact
+ory.js:24:32)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inprocess.js:
+2:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/index.js:32:18)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+lib/index.js:41:33)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+test.js:17:13)
+      at 
+Object.<anonymous> (no
+de_modules/@playwright
+/test/index.js:17:18)
+      at 
+Object.require (tests/
+accountant/accountant.
+spec.js:1:1)
+
+FAIL tests/admin/admin
+.spec.js
+  ΓùÅ Test suite 
+failed to run
+
+    TypeError: Class 
+extends value 
+undefined is not a 
+constructor or null
+
+    [0m[31m[1m>[22
+m[39m[90m 1 |[39m 
+[36mimport[39m { 
+test[33m,[39m 
+expect } 
+[36mfrom[39m [32m'@
+playwright/test'[39m
+[33m;[39m
+     [90m   |[39m 
+[31m[1m^[22m[39m
+     [90m 2 |[39m
+     [90m 3 |[39m 
+[90m/**[39m
+     [90m 4 |[39m 
+[90m * Admin Portal 
+Tests[39m[0m
+
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundleImpl
+/index.js:119:3983)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundle.js:
+49:22)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/utils/
+nodePlatform.js:45:24)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/utils.js:56:2
+7)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/regist
+ry/index.js:48:20)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/index.
+js:37:23)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightConnection.js:24:2
+1)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightServer.js:24:35)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/androidServer
+Impl.js:24:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inProcessFact
+ory.js:24:32)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inprocess.js:
+2:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/index.js:32:18)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+lib/index.js:41:33)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+test.js:17:13)
+      at 
+Object.<anonymous> (no
+de_modules/@playwright
+/test/index.js:17:18)
+      at 
+Object.require (tests/
+admin/admin.spec.js:1:
+1)
+
+FAIL 
+tests/dataflow.spec.js
+  ΓùÅ Test suite 
+failed to run
+
+    TypeError: Class 
+extends value 
+undefined is not a 
+constructor or null
+
+    [0m[31m[1m>[22
+m[39m[90m 1 |[39m 
+[36mimport[39m { 
+test[33m,[39m 
+expect } 
+[36mfrom[39m [32m'@
+playwright/test'[39m
+[33m;[39m
+     [90m   |[39m 
+[31m[1m^[22m[39m
+     [90m 2 |[39m
+     [90m 3 |[39m 
+[90m/**[39m
+     [90m 4 |[39m 
+[90m * Data Flow E2E 
+Tests - College ERP 
+System[39m[0m
+
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundleImpl
+/index.js:119:3983)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/mcpBundle.js:
+49:22)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/utils/
+nodePlatform.js:45:24)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/utils.js:56:2
+7)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/regist
+ry/index.js:48:20)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/server/index.
+js:37:23)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightConnection.js:24:2
+1)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/remote/playwr
+ightServer.js:24:35)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/androidServer
+Impl.js:24:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inProcessFact
+ory.js:24:32)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/lib/inprocess.js:
+2:31)
+      at 
+Object.<anonymous> (no
+de_modules/playwright-
+core/index.js:32:18)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+lib/index.js:41:33)
+      at 
+Object.<anonymous> (no
+de_modules/playwright/
+test.js:17:13)
+      at 
+Object.<anonymous> (no
+de_modules/@playwright
+/test/index.js:17:18)
+      at 
+Object.require (tests/
+dataflow.spec.js:1:1)
+
+Test Suites: 11 
+failed, 11 total
+Tests:       8 
+failed, 3 passed, 11 
+total
+Snapshots:   0 total
+Time:        5.055 s
+Ran all test suites.

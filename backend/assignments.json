@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "69a08ca5c66b621c382e9dfa",
+    "faculty": "69a08ca5c66b621c382e9df6",
+    "subject": {
+      "_id": "6998aba7ae5ee7c2a2f464b0",
+      "name": "Data Structures",
+      "code": "CS101",
+      "type": "THEORY",
+      "credits": 3,
+      "createdAt": "2026-02-20T18:44:55.353Z",
+      "updatedAt": "2026-02-20T18:44:55.353Z",
+      "__v": 0
+    },
+    "section": {
+      "_id": "699c8a2930b0208e29a39ed8",
+      "name": "6c1",
+      "department": "6998ab16ae5ee7c2a2f46497",
+      "semester": {
+        "_id": "699c03b62b7ba5f07962f608",
+        "name": "Semester 6",
+        "level": 6,
+        "course": "699c03b62b7ba5f07962f601",
+        "__v": 0,
+        "createdAt": "2026-02-23T07:37:26.346Z",
+        "updatedAt": "2026-02-23T07:37:26.346Z"
+      },
+      "course": "699c03b62b7ba5f07962f601",
+      "capacity": 60,
+      "baseRollNumber": 2300309,
+      "currentRollIndex": 6,
+      "createdAt": "2026-02-23T17:11:05.358Z",
+      "updatedAt": "2026-02-25T10:47:32.582Z",
+      "__v": 0
+    },
+    "createdAt": "2026-02-26T18:10:45.768Z",
+    "updatedAt": "2026-02-26T18:10:45.768Z",
+    "__v": 0
+  }
+]

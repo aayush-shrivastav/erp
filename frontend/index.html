@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College ERP - Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        var div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.top = '0';
+        div.style.left = '0';
+        div.style.width = '100%';
+        div.style.backgroundColor = 'red';
+        div.style.color = 'white';
+        div.style.padding = '20px';
+        div.style.zIndex = '99999';
+        div.style.fontFamily = 'monospace';
+        div.innerHTML = '<h2>CRITICAL RUNTIME ERROR</h2>' +
+                        '<p><b>Error:</b> ' + msg + '</p>' +
+                        '<p><b>Location:</b> ' + url + ' L' + line + ':' + col + '</p>' +
+                        '<pre>' + (error ? error.stack : 'No stack trace available') + '</pre>';
+        document.body.appendChild(div);
+      };
+      window.onunhandledrejection = function(event) {
+        console.error('Unhandled rejection:', event.reason);
+        // Also display these
+        var div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.top = '50%';
+        div.style.left = '0';
+        div.style.width = '100%';
+        div.style.backgroundColor = 'darkred';
+        div.style.color = 'white';
+        div.style.padding = '20px';
+        div.style.zIndex = '99999';
+        div.style.fontFamily = 'monospace';
+        div.innerHTML = '<h2>UNHANDLED PROMISE REJECTION</h2>' +
+                        '<pre>' + event.reason + '</pre>';
+        document.body.appendChild(div);
+      };
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
