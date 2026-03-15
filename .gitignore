@@ -8,6 +8,7 @@ dist/
 build/
 .next/
 out/
+frontend/dist/
 
 # Environment files
 .env
@@ -19,18 +20,22 @@ out/
 # Logs
 logs/
 *.log
+*.txt
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# OS files
+# OS and Binary files
 .DS_Store
 Thumbs.db
+*.exe
+*.tar.gz
 
 # Test results
 test-results/
 playwright-report/
+playwright/.auth/
 coverage/
 
 # Prisma generated client (optional, usually you DO want this)
