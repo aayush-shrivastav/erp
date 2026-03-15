@@ -6,11 +6,11 @@
       "localStorage": [
         {
           "name": "token",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM1ODgxMjg0LWRhYWQtNDgzNi04YzlkLTk0YjI5MzgzMDlhNSIsInJvbGUiOiJTVVBFUl9BRE1JTiIsImlhdCI6MTc3MzQ5NjgxOSwiZXhwIjoxNzc2MDg4ODE5fQ.FuJTE2B1bVwR_Ci5HlpynQyduGNlDSG9i2weyVk4gxs"
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2MGYwOThkLTgwNWUtNDRhNS04NWY5LTA3ODY2OWZiNTljMSIsInJvbGUiOiJTVVBFUl9BRE1JTiIsImlhdCI6MTc3MzU4NTc4OCwiZXhwIjoxNzc2MTc3Nzg4fQ.bsh1UE48h27WsMVBypPW3QfwZy6mIY5cpqNaYvUbd0A"
         },
         {
           "name": "user",
-          "value": "{\"_id\":\"c5881284-daad-4836-8c9d-94b2938309a5\",\"id\":\"c5881284-daad-4836-8c9d-94b2938309a5\",\"email\":\"admin@eduerp.com\",\"role\":\"SUPER_ADMIN\"}"
+          "value": "{\"_id\":\"060f098d-805e-44a5-85f9-078669fb59c1\",\"id\":\"060f098d-805e-44a5-85f9-078669fb59c1\",\"email\":\"admin@eduerp.com\",\"role\":\"SUPER_ADMIN\",\"name\":\"admin\"}"
         }
       ]
     }

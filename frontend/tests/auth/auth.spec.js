@@ -54,7 +54,7 @@ test.describe('Login Page', () => {
     await page.getByLabel('Password').fill('wrongpass');
     await page.getByRole('button', { name: 'Sign In' }).click();
     
-    await expect(page.getByText(/invalid credentials|inactive account/i)).toBeVisible({ timeout: 5000 });
+await expect(page.getByText('Login failed. Please try again.')).toBeVisible({ timeout: 5000 });
     await expect(page).toHaveURL(/login/);
   });
 

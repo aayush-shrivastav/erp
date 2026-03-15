@@ -42,7 +42,3 @@ const accountsService = {
 };
 
 export default accountsService;
-</xai:function_call >
-
-<xai:function_call name="edit_file">
-<parameter name="path">d:/kkkk/backend/src/controllers/accountsTransactionController.js

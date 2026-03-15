@@ -24,9 +24,10 @@ import {
     Save,
     History,
     AlertTriangle,
-    Edit
+    Edit,
+    ArrowRight
 } from 'lucide-react';
-import { STUDENTS } from '../../data/mockData';
+import { STUDENTS } from '../../__tests__/mockData';
 import { useAuth } from '../../hooks/useAuth';
 import { storage } from '../../utils/storage';
 import { useToast } from '../../hooks/useToast';
@@ -34,9 +35,10 @@ import { useToast } from '../../hooks/useToast';
 const StudentsPage = () => {
     const { showToast } = useToast();
     const { user } = useAuth();
-    const isAdmin = user.role === 'admin';
+    const isAdmin = user?.role?.toLowerCase() === 'admin' || user?.role === 'SUPER_ADMIN';
     const [students, setStudents] = useState(STUDENTS);
     const [viewStudent, setViewStudent] = useState(null);
+    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('ALL'); // ALL, PENDING
     const [isTransferModalOpen, setIsTransferModalOpen] = useState(false);
     const [isOverrideMode, setIsOverrideMode] = useState(false);
@@ -211,7 +213,7 @@ const StudentsPage = () => {
                             <Download size={16} />
                             <span>Export</span>
                         </Button>
-                        <Button size="sm">
+                        <Button size="sm" onClick={() => setIsAddModalOpen(true)}>
                             <Plus size={16} />
                             <span>Add Student</span>
                         </Button>
@@ -425,6 +427,45 @@ const StudentsPage = () => {
                                 onChange={(e) => setTransferData({ ...transferData, reason: e.target.value })}
                                 className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all font-bold text-sm min-h-[100px] resize-none"
                             />
+                        </div>
+                    </div>
+                </div>
+            </Modal>
+            
+            {/* Ticket 1.15: Student Registration Modal */}
+            <Modal
+                isOpen={isAddModalOpen}
+                onClose={() => setIsAddModalOpen(false)}
+                title="Register New Student"
+                footer={
+                    <div className="flex gap-3 w-full">
+                        <Button variant="secondary" className="flex-1" onClick={() => setIsAddModalOpen(false)}>Cancel</Button>
+                        <Button className="flex-1 bg-blue-600" onClick={() => {
+                            showToast("Student profile initialized in registry", "success");
+                            setIsAddModalOpen(false);
+                        }}>Register Student</Button>
+                    </div>
+                }
+            >
+                <div className="space-y-6 py-2">
+                    <div className="grid grid-cols-2 gap-4">
+                        <Input label="Full Name" placeholder="e.g. Rahul Kumar" className="col-span-2" />
+                        <Input label="Enrollment No" placeholder="BT2024XXX" />
+                        <Input label="Phone Number" placeholder="+91 XXXXX-XXXXX" />
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Admission Batch</label>
+                            <select className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all font-bold text-sm">
+                                <option>Batch 2024-28</option>
+                                <option>Batch 2023-27</option>
+                            </select>
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Funding Path</label>
+                            <select className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all font-bold text-sm">
+                                <option>SELF</option>
+                                <option>DRCC</option>
+                                <option>SCHOLARSHIP</option>
+                            </select>
                         </div>
                     </div>
                 </div>

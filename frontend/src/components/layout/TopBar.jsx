@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Search, Bell, User, Menu, X, Clock, ExternalLink } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { NOTIFICATIONS } from '../../data/mockData';
+import { NOTIFICATIONS } from '../../__tests__/mockData';
 import Badge from '../ui/Badge';
 
 const TopBar = ({ onMenuClick }) => {

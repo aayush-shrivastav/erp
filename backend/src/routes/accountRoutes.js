@@ -18,8 +18,17 @@ const {
     addFine,
     editPayment,
     getTransactions,
-    getEditHistory
+    getEditHistory,
+    getLedger
 } = require('../controllers/accountsTransactionController');
+const { validateRequest } = require('../middlewares/validate');
+const { 
+  createFeeStructureSchema, 
+  processPaymentSchema, 
+  addCollegeFeeSchema, 
+  addBusFeeSchema, 
+  addFineSchema 
+} = require('../validators/feeValidator');
 
 const router = express.Router();
 
@@ -38,17 +47,17 @@ router.get('/student/:rollNo', authorize('ADMIN', 'ACCOUNTANT'), verifyStudent);
 // @desc    Add college fee payment
 // @route   POST /api/accounts/college-fee
 // @access  Private/Admin/Accountant
-router.post('/college-fee', authorize('ADMIN', 'ACCOUNTANT'), addCollegeFee);
+router.post('/college-fee', authorize('ADMIN', 'ACCOUNTANT'), validateRequest(addCollegeFeeSchema), addCollegeFee);
 
 // @desc    Add bus fee payment
 // @route   POST /api/accounts/bus-fee
 // @access  Private/Admin/Accountant
-router.post('/bus-fee', authorize('ADMIN', 'ACCOUNTANT'), addBusFee);
+router.post('/bus-fee', authorize('ADMIN', 'ACCOUNTANT'), validateRequest(addBusFeeSchema), addBusFee);
 
 // @desc    Add fine
 // @route   POST /api/accounts/fine
 // @access  Private/Admin/Accountant
-router.post('/fine', authorize('ADMIN', 'ACCOUNTANT'), addFine);
+router.post('/fine', authorize('ADMIN', 'ACCOUNTANT'), validateRequest(addFineSchema), addFine);
 
 // @desc    Edit a payment entry
 // @route   PUT /api/accounts/edit-payment/:id
@@ -76,7 +85,7 @@ router.get('/edit-history/:rollNo', authorize('ADMIN', 'ACCOUNTANT'), getEditHis
 
 // -- Fee Structure Management -- //
 router.route('/structures')
-    .post(authorize('SUPER_ADMIN', 'ACCOUNTS_ADMIN'), createFeeStructure)
+    .post(authorize('SUPER_ADMIN', 'ACCOUNTS_ADMIN'), validateRequest(createFeeStructureSchema), createFeeStructure)
     .get(authorize('SUPER_ADMIN', 'ACCOUNTS_ADMIN'), getFeeStructures);
 
 // -- Assignment -- //
@@ -88,7 +97,7 @@ router.post('/student-fees/:id/manual-fine', authorize('SUPER_ADMIN', 'ACCOUNTS_
 
 // -- Payments & Receipts -- //
 router.route('/payments')
-    .post(authorize('SUPER_ADMIN', 'ACCOUNTS_ADMIN'), processPayment)
+    .post(authorize('SUPER_ADMIN', 'ACCOUNTS_ADMIN'), validateRequest(processPaymentSchema), processPayment)
     .get(authorize('SUPER_ADMIN', 'ACCOUNTS_ADMIN'), getPayments);
 
 router.post('/payments/:id/reverse', authorize('SUPER_ADMIN', 'ACCOUNTS_ADMIN'), reversePayment);

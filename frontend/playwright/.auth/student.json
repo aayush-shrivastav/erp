@@ -6,11 +6,11 @@
       "localStorage": [
         {
           "name": "token",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0MDJhZjc2LTM0OTAtNDJjNC04YjI3LWI0MDkzM2Q2YTBhMiIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzczNDk2ODI4LCJleHAiOjE3NzYwODg4Mjh9.qqU5INlf6uE0wBT4xq9OvpclT3ogb-QFOXrB_lUPFg0"
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM0MzYzOGQ3LWI1YjMtNGQyYi05YmRlLWI3NDM3NDhjMjBmOSIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzczNTg1Nzk0LCJleHAiOjE3NzYxNzc3OTR9.LdBh6j-gQEmNPX12UvZKhfJTp5c42_yOt5MYCxsNjQU"
         },
         {
           "name": "user",
-          "value": "{\"_id\":\"2402af76-3490-42c4-8b27-b40933d6a0a2\",\"id\":\"2402af76-3490-42c4-8b27-b40933d6a0a2\",\"email\":\"student@test.com\",\"role\":\"STUDENT\"}"
+          "value": "{\"_id\":\"c43638d7-b5b3-4d2b-9bde-b743748c20f9\",\"id\":\"c43638d7-b5b3-4d2b-9bde-b743748c20f9\",\"email\":\"student@test.com\",\"role\":\"STUDENT\",\"name\":\"Student One\"}"
         }
       ]
     }

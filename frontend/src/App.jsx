@@ -25,6 +25,11 @@ const PromotionPage = React.lazy(() => import('./pages/admin/PromotionPage'));
 const ExaminationPage = React.lazy(() => import('./pages/admin/ExaminationPage'));
 const ReportsPage = React.lazy(() => import('./pages/admin/ReportsPage'));
 const OnboardingWizard = React.lazy(() => import('./pages/admin/OnboardingWizard'));
+const DepartmentsPage = React.lazy(() => import('./pages/Departments'));
+const CoursesPage = React.lazy(() => import('./pages/Courses'));
+const SubjectsPage = React.lazy(() => import('./pages/Subjects'));
+const AdminNoticesPage = React.lazy(() => import('./pages/Notices'));
+const AdminSettingsPage = React.lazy(() => import('./pages/Settings'));
 
 // Teacher Pages (Lazy Loaded)
 const TeacherDashboard = React.lazy(() => import('./pages/teacher/TeacherDashboard'));
@@ -38,6 +43,13 @@ const FeeManagementPage = React.lazy(() => import('./pages/accounts/FeeManagemen
 const StudentLedgerPage = React.lazy(() => import('./pages/accounts/StudentLedgerPage'));
 
 // Student Pages (Lazy Loaded)
+const StudentDashboard = React.lazy(() => import('./pages/student/StudentDashboard'));
+const StudentProfile = React.lazy(() => import('./pages/student/StudentProfile'));
+const StudentFees = React.lazy(() => import('./pages/student/StudentFees'));
+const StudentMarks = React.lazy(() => import('./pages/student/StudentMarks'));
+const StudentAttendance = React.lazy(() => import('./pages/student/StudentAttendance'));
+const StudentNotices = React.lazy(() => import('./pages/student/StudentNotices'));
+const StudentTimetable = React.lazy(() => import('./pages/student/StudentTimetable'));
 const BacklogsPage = React.lazy(() => import('./pages/student/BacklogsPage'));
 const DocumentsPage = React.lazy(() => import('./pages/student/DocumentsPage'));
 
@@ -177,15 +189,46 @@ const App = () => {
                           <ProtectedRoute allowedRoles={['admin', 'ADMIN', 'SUPER_ADMIN', 'ACADEMIC_ADMIN']}>
                             <Routes>
                               <Route path="dashboard" element={<ErrorBoundary><AdminDashboard /></ErrorBoundary>} />
-                              <Route path="sessions" element={<ErrorBoundary><SessionsPage /></ErrorBoundary>} />
-                              <Route path="students" element={<ErrorBoundary><StudentsPage /></ErrorBoundary>} />
-                              <Route path="teachers" element={<ErrorBoundary><TeachersPage /></ErrorBoundary>} />
-                              <Route path="class-tree" element={<ErrorBoundary><ClassTreePage /></ErrorBoundary>} />
+                              
+                              {/* Standardized Nested Routes to match Sidebar */}
+                              <Route path="users">
+                                <Route path="teachers" element={<ErrorBoundary><TeachersPage /></ErrorBoundary>} />
+                                <Route path="students" element={<ErrorBoundary><StudentsPage /></ErrorBoundary>} />
+                              </Route>
+
+                              <Route path="academic">
+                                <Route path="sessions" element={<ErrorBoundary><SessionsPage /></ErrorBoundary>} />
+                                <Route path="courses" element={<ErrorBoundary><CoursesPage /></ErrorBoundary>} />
+                                <Route path="sections" element={<ErrorBoundary><ClassTreePage /></ErrorBoundary>} />
+                                <Route path="subjects" element={<ErrorBoundary><SubjectsPage /></ErrorBoundary>} />
+                              </Route>
+
+                              <Route path="examination">
+                                <Route path="results" element={<ErrorBoundary><ExaminationPage /></ErrorBoundary>} />
+                              </Route>
+
+                              {/* Operations */}
                               <Route path="subject-assignment" element={<ErrorBoundary><SubjectAssignmentPage /></ErrorBoundary>} />
                               <Route path="promotion" element={<ErrorBoundary><PromotionPage /></ErrorBoundary>} />
-                              <Route path="examination" element={<ErrorBoundary><ExaminationPage /></ErrorBoundary>} />
                               <Route path="reports" element={<ErrorBoundary><ReportsPage /></ErrorBoundary>} />
                               <Route path="onboarding" element={<ErrorBoundary><OnboardingWizard /></ErrorBoundary>} />
+                              
+                              {/* Core Management */}
+                              <Route path="fees" element={<ErrorBoundary><FeeManagementPage /></ErrorBoundary>} />
+                              <Route path="attendance" element={<ErrorBoundary><AttendancePage /></ErrorBoundary>} />
+                              <Route path="notices" element={<ErrorBoundary><AdminNoticesPage /></ErrorBoundary>} />
+                              <Route path="settings" element={<ErrorBoundary><AdminSettingsPage /></ErrorBoundary>} />
+
+                              {/* Legacy Redirects for Tests and Backward Compatibility */}
+                              <Route path="faculty" element={<Navigate to="users/teachers" replace />} />
+                              <Route path="students" element={<Navigate to="users/students" replace />} />
+                              <Route path="sessions" element={<Navigate to="academic/sessions" replace />} />
+                              <Route path="courses" element={<Navigate to="academic/courses" replace />} />
+                              <Route path="subjects" element={<Navigate to="academic/subjects" replace />} />
+                              <Route path="departments" element={<Navigate to="academic/departments" replace />} />
+                              
+                              {/* 404 within Admin */}
+                              <Route path="*" element={<Navigate to="dashboard" replace />} />
                             </Routes>
                           </ProtectedRoute>
                         }
@@ -225,10 +268,17 @@ const App = () => {
                         path="student/*"
                         element={
                           <ProtectedRoute allowedRoles={['student', 'STUDENT']}>
-                            <Routes>
-                              <Route path="backlogs" element={<ErrorBoundary><BacklogsPage /></ErrorBoundary>} />
-                              <Route path="documents" element={<ErrorBoundary><DocumentsPage /></ErrorBoundary>} />
-                            </Routes>
+                             <Routes>
+                               <Route path="dashboard" element={<ErrorBoundary><StudentDashboard /></ErrorBoundary>} />
+                               <Route path="profile" element={<ErrorBoundary><StudentProfile /></ErrorBoundary>} />
+                               <Route path="fees" element={<ErrorBoundary><StudentFees /></ErrorBoundary>} />
+                               <Route path="marks" element={<ErrorBoundary><StudentMarks /></ErrorBoundary>} />
+                               <Route path="attendance" element={<ErrorBoundary><StudentAttendance /></ErrorBoundary>} />
+                               <Route path="notices" element={<ErrorBoundary><StudentNotices /></ErrorBoundary>} />
+                               <Route path="timetable" element={<ErrorBoundary><StudentTimetable /></ErrorBoundary>} />
+                               <Route path="backlogs" element={<ErrorBoundary><BacklogsPage /></ErrorBoundary>} />
+                               <Route path="documents" element={<ErrorBoundary><DocumentsPage /></ErrorBoundary>} />
+                             </Routes>
                           </ProtectedRoute>
                         }
                       />

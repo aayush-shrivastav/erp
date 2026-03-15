@@ -22,7 +22,7 @@ import {
     Loader2,
     Receipt
 } from 'lucide-react';
-import { FEE_DATA, STUDENTS } from '../../data/mockData';
+import { FEE_DATA, STUDENTS } from '../../__tests__/mockData';
 import { useToast } from '../../hooks/useToast';
 import accountsService from '../../services/accountsService.js';
 

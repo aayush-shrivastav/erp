@@ -8,7 +8,7 @@ import ConfirmModal from '../../components/ui/ConfirmModal';
 import DataTable from '../../components/ui/DataTable';
 import PageHeader from '../../components/layout/PageHeader';
 import { Calendar, Plus, Edit2, Archive, AlertCircle, ShieldCheck } from 'lucide-react';
-import { ACADEMIC_SESSIONS } from '../../data/mockData';
+import { ACADEMIC_SESSIONS } from '../../__tests__/mockData';
 import { useToast } from '../../hooks/useToast';
 import { formatDate } from '../../utils/formatters';
 

@@ -18,9 +18,11 @@ import {
     BookOpen,
     ShieldAlert,
     TrendingUp,
-    Clock
+    Clock,
+    FileDown,
+    Printer
 } from 'lucide-react';
-import { MOCK_RESULTS, STUDENTS, SUBJECTS, ACADEMIC_SESSIONS } from '../../data/mockData';
+import { MOCK_RESULTS, STUDENTS, SUBJECTS, ACADEMIC_SESSIONS } from '../../__tests__/mockData';
 import { useAuth } from '../../hooks/useAuth';
 import { api } from '../../utils/api';
 import Modal from '../../components/ui/Modal';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Banknote, FileText, Loader2, AlertCircle, Calendar, Download } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const StudentFees = () => {
     const [loading, setLoading] = useState(true);

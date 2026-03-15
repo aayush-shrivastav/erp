@@ -22,6 +22,17 @@ export default defineConfig({
     video: 'retain-on-failure',
     actionTimeout: 10000,
     navigationTimeout: 30000,
+    // Add environment variables for tests
+    processEnv: {
+        ADMIN_EMAIL: 'admin@eduerp.com',
+        ADMIN_PASSWORD: 'admin123',
+        STUDENT_EMAIL: 'student@test.com',
+        STUDENT_PASSWORD: 'pass123',
+        FACULTY_EMAIL: 'teacher@test.com',
+        FACULTY_PASSWORD: 'pass123',
+        ACCOUNTANT_EMAIL: 'accountant@test.com',
+        ACCOUNTANT_PASSWORD: 'pass123',
+    }
   },
 
   // Each project runs ONLY its specific test folder
@@ -85,15 +96,15 @@ export default defineConfig({
       // Backend API required for login in global auth setup and auth specs.
       command: 'npm run dev',
       cwd: '../backend',
-      url: 'http://localhost:5001',
-      reuseExistingServer: !process.env.CI,
-      timeout: 120 * 1000,
+      url: 'http://127.0.0.1:5001',
+      reuseExistingServer: true,
+      timeout: 180 * 1000,
     },
     {
       command: 'npm run dev',
       url: 'http://127.0.0.1:5173',
-      reuseExistingServer: !process.env.CI,
-      timeout: 120 * 1000,
+      reuseExistingServer: true,
+      timeout: 180 * 1000,
     },
   ],
 });

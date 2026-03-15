@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Save, Lock, Edit3, ClipboardList } from 'lucide-react';
-import api from '../services/api';
+import api from '../utils/api';
 
 const Marks = () => {
     const [sessions, setSessions] = useState([]);

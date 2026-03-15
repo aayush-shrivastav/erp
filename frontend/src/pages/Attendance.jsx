@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Search, Save, CheckCircle, XCircle, Clock } from 'lucide-react';
-import api from '../services/api';
+import api from '../utils/api';
 
 const Attendance = () => {
     const [sessions, setSessions] = useState([]);

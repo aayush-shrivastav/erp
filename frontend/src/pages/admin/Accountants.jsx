@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Search, Building2, Mail, Lock, X, Trash2 } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const Accountants = () => {
     const [accountants, setAccountants] = useState([]);

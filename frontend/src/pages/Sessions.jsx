@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Search, CheckCircle, Clock } from 'lucide-react';
-import api from '../services/api';
+import api from '../utils/api';
 import Modal from '../components/Modal';
 
 const Sessions = () => {

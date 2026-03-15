@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Edit3, Loader2, Award, AlertCircle } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const StudentMarks = () => {
     const [loading, setLoading] = useState(true);

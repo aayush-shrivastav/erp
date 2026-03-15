@@ -6,11 +6,11 @@
       "localStorage": [
         {
           "name": "token",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4ZmE0YmMzLTNhMWEtNDllZi1hZWZjLTgzZTVjNDAyNDQxYyIsInJvbGUiOiJBQ0NPVU5UU19BRE1JTiIsImlhdCI6MTc3MzQ5NjgyMiwiZXhwIjoxNzc2MDg4ODIyfQ.gIvyrOLcEZp6guE0nGGHjHzNtHgxzLn9QEGRcBK71y0"
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiZTNiMzMzLWQ1OTUtNDllOC1hMjY0LTQ5NjA5ZGViZWZlNiIsInJvbGUiOiJBQ0NPVU5UU19BRE1JTiIsImlhdCI6MTc3MzU4NTc5MCwiZXhwIjoxNzc2MTc3NzkwfQ.RUsxTIGmq4dCiYIMS0tzmUD0D0fSNjxVLKwOn-HgAtk"
         },
         {
           "name": "user",
-          "value": "{\"_id\":\"78fa4bc3-3a1a-49ef-aefc-83e5c402441c\",\"id\":\"78fa4bc3-3a1a-49ef-aefc-83e5c402441c\",\"email\":\"accountant@test.com\",\"role\":\"ACCOUNTS_ADMIN\"}"
+          "value": "{\"_id\":\"2be3b333-d595-49e8-a264-49609debefe6\",\"id\":\"2be3b333-d595-49e8-a264-49609debefe6\",\"email\":\"accountant@test.com\",\"role\":\"ACCOUNTS_ADMIN\",\"name\":\"accountant\"}"
         }
       ]
     }

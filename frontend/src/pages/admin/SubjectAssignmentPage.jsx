@@ -19,7 +19,7 @@ import {
     Info,
     ShieldAlert
 } from 'lucide-react';
-import { SUBJECTS, TEACHERS } from '../../data/mockData';
+import { SUBJECTS, TEACHERS } from '../../__tests__/mockData';
 import { useToast } from '../../hooks/useToast';
 
 const SubjectAssignmentPage = () => {

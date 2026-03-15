@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Megaphone, Calendar, Users, Loader2, Search } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const StudentNotices = () => {
     const [loading, setLoading] = useState(true);

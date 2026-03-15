@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { useBlocker } from 'react-router-dom';
+
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 import Badge from '../../components/ui/Badge';
@@ -24,7 +24,7 @@ import {
     Clock,
     Plus
 } from 'lucide-react';
-import { STUDENTS } from '../../data/mockData';
+import { STUDENTS } from '../../__tests__/mockData';
 import { useToast } from '../../hooks/useToast';
 import { storage } from '../../utils/storage';
 import { api } from '../../utils/api';
@@ -54,11 +54,7 @@ const AttendancePage = () => {
     const [isDirty, setIsDirty] = useState(false);
     const isSubmittingRef = useRef(false);
 
-    // 3.1 Unsaved Changes Blocker
-    const blocker = useBlocker(
-        ({ currentLocation, nextLocation }) =>
-            isDirty && currentLocation.pathname !== nextLocation.pathname
-    );
+
 
     // 1.5 Persistence
     useEffect(() => {
@@ -234,23 +230,7 @@ const AttendancePage = () => {
 
     const renderMarking = () => (
         <div className="space-y-6 animate-in slide-in-from-right-4 duration-500">
-            {/* Blocker Modal */}
-            <Modal
-                isOpen={blocker.state === "blocked"}
-                onClose={() => blocker.reset()}
-                title="Discard Unsaved Logs?"
-                footer={
-                    <div className="flex gap-3 w-full">
-                        <Button variant="secondary" className="flex-1" onClick={() => blocker.reset()}>Stay and Save</Button>
-                        <Button variant="secondary" className="flex-1 text-red-600 border-red-100 bg-red-50 hover:bg-red-100" onClick={() => blocker.proceed()}>Discard and Leave</Button>
-                    </div>
-                }
-            >
-                <div className="py-2 flex gap-4 text-slate-600">
-                    <AlertTriangle className="text-amber-500 shrink-0" size={24} />
-                    <p className="text-sm font-medium">You have unsaved attendance marking session. If you leave now, the current status will not be synchronized to the registry.</p>
-                </div>
-            </Modal>
+
 
             {/* Context Bar */}
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-white p-6 rounded-3xl border border-blue-100 shadow-xl shadow-blue-50/50">

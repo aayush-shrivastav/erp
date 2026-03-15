@@ -2,27 +2,48 @@ const prisma = require('../config/prisma');
 
 exports.getAttendance = async (req, res, next) => {
     try {
-        const attendance = await prisma.attendance.findMany({
-            include: {
-                session: { select: { year: true } },
-                section: { select: { name: true } },
-                subject: { select: { name: true, code: true } },
-                faculty: { select: { name: true, employeeId: true } },
-                records: {
-                    include: {
-                        student: { 
-                            select: { 
-                                name: true, 
-                                enrollmentNo: true,
-                                user: { select: { email: true } }
-                            } 
+        const { skip, take, page, limit } = req.pagination || { skip: 0, take: 20, page: 1, limit: 20 };
+
+        const [attendance, total] = await Promise.all([
+            prisma.attendance.findMany({
+                include: {
+                    session: { select: { year: true } },
+                    section: { select: { name: true } },
+                    subject: { select: { name: true, code: true } },
+                    faculty: { select: { name: true, employeeId: true } },
+                    records: {
+                        include: {
+                            student: { 
+                                select: { 
+                                    name: true, 
+                                    enrollmentNo: true,
+                                    user: { select: { email: true } }
+                                } 
+                            }
                         }
                     }
-                }
-            },
-            orderBy: { date: 'desc' }
+                },
+                orderBy: { date: 'desc' },
+                skip,
+                take
+            }),
+            prisma.attendance.count()
+        ]);
+
+        const totalPages = Math.ceil(total / limit);
+
+        res.status(200).json({ 
+            success: true, 
+            data: attendance,
+            pagination: {
+                total,
+                page,
+                limit,
+                totalPages,
+                hasNext: page < totalPages,
+                hasPrev: page > 1
+            }
         });
-        res.status(200).json({ success: true, count: attendance.length, data: attendance });
     } catch (error) { next(error); }
 };
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ClipboardCheck, Loader2 } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const StudentAttendance = () => {
     const [loading, setLoading] = useState(true);

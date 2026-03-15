@@ -23,7 +23,7 @@ import {
     AlertCircle,
     Loader2
 } from 'lucide-react';
-import { STUDENTS, FEE_DATA, receiptCounter } from '../../data/mockData';
+import { STUDENTS, FEE_DATA, receiptCounter } from '../../__tests__/mockData';
 import { useToast } from '../../hooks/useToast';
 import { storage } from '../../utils/storage';
 import { api } from '../../utils/api';

@@ -4,25 +4,64 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
+const rateLimit = require('express-rate-limit');
 
 const app = express();
+
+// 1. Security Headers
+app.use(helmet());
+
+// 2. CORS Configuration
+const allowedOrigins = process.env.ALLOWED_ORIGINS 
+    ? process.env.ALLOWED_ORIGINS.split(',').map(origin => origin.trim())
+    : ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:3000'];
+
+app.use(cors({
+    origin: (origin, callback) => {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        // but only if not in production or if specifically desired.
+        // For a web app, we typically want to be strict.
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true,
+}));
+
+// 3. Rate Limiting
+const generalLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests per windowMs
+    message: {
+        success: false,
+        message: 'Too many requests from this IP, please try again after 15 minutes'
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+});
+
+const loginLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 5, // limit each IP to 5 login attempts per windowMs
+    message: {
+        success: false,
+        message: 'Too many login attempts, please try again after 15 minutes'
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+});
+
+// Apply general limiter to all /api routes
+app.use('/api', generalLimiter);
 
 // Middlewares
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-    origin: [
-        'http://localhost:5173',
-        'http://127.0.0.1:5173',
-        'http://localhost:5174',
-        'http://127.0.0.1:5174',
-    ],
-    credentials: true,
-}));
-app.use(helmet());
 app.use(morgan('dev'));
 
-// Serve static files (receipts, uploads, etc.)
+// Serve static files
 app.use('/public', express.static(path.join(__dirname, '..', 'public')));
 app.use('/receipts', express.static(path.join(__dirname, '..', 'public', 'receipts')));
 
@@ -56,26 +95,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// Base Route
-app.get('/', (req, res) => {
-    res.status(200).json({ 
-        success: true,
-        message: 'Welcome to the College ERP API',
-        version: '1.0.0',
-        endpoints: {
-            auth: '/api/v1/auth',
-            students: '/api/v1/students',
-            faculty: '/api/v1/faculty',
-            accounts: '/api/v1/accounts',
-            fees: '/api/v1/fees',
-            attendance: '/api/v1/attendance',
-            marks: '/api/v1/marks',
-            notices: '/api/v1/notices',
-            dashboard: '/api/v1/dashboard'
-        }
-    });
-});
-
 // Import Routes
 const authRoutes = require('./routes/authRoutes');
 const adminRoutes = require('./routes/adminRoutes');
@@ -97,6 +116,9 @@ const groupRoutes = require('./routes/groupRoutes');
 const labGroupRoutes = require('./routes/labGroupRoutes');
 
 // Mount Routes
+// Apply login-specific rate limit before mounting auth routes
+app.use('/api/v1/auth/login', loginLimiter);
+
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/admins', adminRoutes);
 app.use('/api/v1/academic', academicRoutes);
@@ -116,16 +138,24 @@ app.use('/api/v1/accounts', accountRoutes);
 app.use('/api/v1/groups', groupRoutes);
 app.use('/api/v1/labgroups', labGroupRoutes);
 
-// 404 Handler for unmatched routes - must be after all routes
-app.use((req, res, next) => {
-    res.status(404).json({
-        success: false,
-        message: `Route ${req.originalUrl} not found`,
-        hint: 'Check the API documentation for available endpoints'
+// Base Route
+app.get('/', (req, res) => {
+    res.status(200).json({ 
+        success: true,
+        message: 'Welcome to the College ERP API',
+        version: '1.0.0'
     });
 });
 
-// Error Handler Middleware - must be last
+// 404 Handler
+app.use((req, res, next) => {
+    res.status(404).json({
+        success: false,
+        message: `Route ${req.originalUrl} not found`
+    });
+});
+
+// 5. Global Error Handler Middleware
 const { errorHandler } = require('./middlewares/error');
 app.use(errorHandler);
 

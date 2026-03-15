@@ -18,7 +18,7 @@ import {
     ChevronRight,
     Star
 } from 'lucide-react';
-import { TEACHERS } from '../../data/mockData';
+import { TEACHERS } from '../../__tests__/mockData';
 import { useToast } from '../../hooks/useToast';
 
 const TeachersPage = () => {

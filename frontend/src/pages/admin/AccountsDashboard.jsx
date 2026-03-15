@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IndianRupee, TrendingUp, AlertTriangle, Users } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const AccountsDashboard = () => {
     const [metrics, setMetrics] = useState({

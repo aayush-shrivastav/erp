@@ -15,7 +15,7 @@ import {
     FileText,
     History
 } from 'lucide-react';
-import { MOCK_RESULTS } from '../../data/mockData';
+import { MOCK_RESULTS } from '../../__tests__/mockData';
 import { useAuth } from '../../hooks/useAuth';
 
 const BacklogsPage = () => {

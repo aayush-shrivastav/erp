@@ -1,6 +1,7 @@
 const express = require('express');
 const { createOrUpdateMarks, getMarks, lockMarks, getMyMarks, getTeacherClasses, getGroupStudents, finalizeSubjectMarks } = require('../controllers/markController');
 const { protect, authorize } = require('../middlewares/auth');
+const { paginate } = require('../middlewares/paginate');
 
 const router = express.Router();
 
@@ -8,7 +9,7 @@ router.use(protect);
 
 router.route('/')
     .post(authorize('SUPER_ADMIN', 'ACADEMIC_ADMIN', 'FACULTY'), createOrUpdateMarks)
-    .get(getMarks);
+    .get(paginate, getMarks);
 
 router.get('/teacher/classes', authorize('FACULTY'), getTeacherClasses);
 router.get('/group/:groupId/students', authorize('FACULTY'), getGroupStudents);

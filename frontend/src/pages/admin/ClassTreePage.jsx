@@ -23,7 +23,7 @@ import {
     Clock,
     AlertTriangle
 } from 'lucide-react';
-import { STUDENTS } from '../../data/mockData';
+import { STUDENTS } from '../../__tests__/mockData';
 
 const ClassTreePage = () => {
     const [searchParams, setSearchParams] = useSearchParams();

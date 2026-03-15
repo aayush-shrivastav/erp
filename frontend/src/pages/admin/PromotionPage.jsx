@@ -22,7 +22,7 @@ import {
     Clock,
     UserCheck
 } from 'lucide-react';
-import { STUDENTS } from '../../data/mockData';
+import { STUDENTS } from '../../__tests__/mockData';
 import { useAuth } from '../../hooks/useAuth';
 import { storage } from '../../utils/storage';
 import { useToast } from '../../hooks/useToast';

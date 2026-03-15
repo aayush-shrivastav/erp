@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Megaphone, Calendar as CalendarIcon, Users, Trash2 } from 'lucide-react';
-import api from '../services/api';
+import api from '../utils/api';
 import Modal from '../components/Modal';
 
 const Notices = () => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Users, CheckCircle } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const FeeAssignment = () => {
     const [structures, setStructures] = useState([]);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Users, BookOpen, Calendar, Megaphone, Loader2 } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const FacultyDashboard = () => {
     const [stats, setStats] = useState({

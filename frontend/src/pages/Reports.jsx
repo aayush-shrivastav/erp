@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Filter, Download, FileText, Calendar, Wallet, Users, AlertTriangle } from 'lucide-react';
-import api from '../services/api';
+import api from '../utils/api';
 
 const Reports = () => {
     const [activeTab, setActiveTab] = useState('student-wise');

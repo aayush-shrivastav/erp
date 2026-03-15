@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const FacultyClasses = () => {
     const [assignments, setAssignments] = useState([]);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Search, Edit2, Trash2, GraduationCap, Loader2, BookOpen } from 'lucide-react';
-import api from '../services/api';
+import api from '../utils/api';
 import Modal from '../components/Modal';
 
 const Faculty = () => {

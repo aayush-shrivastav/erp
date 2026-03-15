@@ -6,11 +6,11 @@
       "localStorage": [
         {
           "name": "token",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhlZjA5NzExLTRiNDUtNGE4ZS1hMDU3LTg5MWUxOGZhNzhjNCIsInJvbGUiOiJGQUNVTFRZIiwiaWF0IjoxNzczNDk2ODI1LCJleHAiOjE3NzYwODg4MjV9.m4XVnSf4aWkLVHI2f7LU9Io-vyXTp8Beo8NACgRBeE8"
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNhNzAxNjg2LWZkNmQtNGYzZC04MDE3LTI3NThlNTM1YWY4YiIsInJvbGUiOiJGQUNVTFRZIiwiaWF0IjoxNzczNTg1NzkyLCJleHAiOjE3NzYxNzc3OTJ9.jAx2FX1pg_8FzCseVsX7PQHA-rzmgTKHKMAEqteSo8I"
         },
         {
           "name": "user",
-          "value": "{\"_id\":\"8ef09711-4b45-4a8e-a057-891e18fa78c4\",\"id\":\"8ef09711-4b45-4a8e-a057-891e18fa78c4\",\"email\":\"teacher@test.com\",\"role\":\"FACULTY\"}"
+          "value": "{\"_id\":\"ca701686-fd6d-4f3d-8017-2758e535af8b\",\"id\":\"ca701686-fd6d-4f3d-8017-2758e535af8b\",\"email\":\"teacher@test.com\",\"role\":\"FACULTY\",\"name\":\"Teacher One\"}"
         }
       ]
     }

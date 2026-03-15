@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, CreditCard, AlertCircle, FileText, PlusCircle, CheckCircle } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 import DualLedger from '../../components/DualLedger';
 
 const PaymentEntry = () => {

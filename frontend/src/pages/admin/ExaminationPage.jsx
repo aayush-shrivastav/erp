@@ -17,7 +17,7 @@ import {
     ChevronRight,
     Search
 } from 'lucide-react';
-import { RESULT_STATUS, MARKS_STATUS, SUBJECTS, STUDENTS } from '../../data/mockData';
+import { RESULT_STATUS, MARKS_STATUS, SUBJECTS, STUDENTS } from '../../__tests__/mockData';
 
 const ExaminationPage = () => {
     const { showToast } = useToast();

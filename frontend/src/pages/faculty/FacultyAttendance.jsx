@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ClipboardCheck, Loader2, Save, Calendar, CheckCircle2, XCircle, Clock } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const FacultyAttendance = () => {
     const [searchParams] = useSearchParams();

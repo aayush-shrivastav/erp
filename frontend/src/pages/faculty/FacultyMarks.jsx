@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Edit3, Loader2, Save, FileText } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const FacultyMarks = () => {
     const [searchParams] = useSearchParams();

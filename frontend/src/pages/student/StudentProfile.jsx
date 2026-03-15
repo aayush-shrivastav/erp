@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { User, Mail, GraduationCap, Building, BookOpen, Clock, Loader2, Key, Star, ShieldCheck, Edit3, Save, X } from 'lucide-react';
+import { User, Mail, GraduationCap, Building, BookOpen, Clock, Loader2, Key, Star, ShieldCheck, Edit3, Save, X, LayoutGrid, AlertCircle, Info } from 'lucide-react';
 import { storage } from '../../utils/storage';
 import { api } from '../../utils/api';
 import { useToast } from '../../hooks/useToast';

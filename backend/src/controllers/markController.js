@@ -94,17 +94,42 @@ exports.getMarks = async (req, res, next) => {
         if(where.subject) { where.subjectId = where.subject; delete where.subject; }
         if(where.section) { where.sectionId = where.section; delete where.section; }
         if(where.session) { where.sessionId = where.session; delete where.session; }
+        
+        // Remove pagination params from where clause
+        delete where.page;
+        delete where.limit;
 
-        const marks = await prisma.mark.findMany({
-            where,
-            include: {
-                subject: { select: { name: true, code: true } },
-                section: { select: { name: true } },
-                session: { select: { year: true } },
-                records: true
+        const { skip, take, page, limit } = req.pagination || { skip: 0, take: 20, page: 1, limit: 20 };
+
+        const [marks, total] = await Promise.all([
+            prisma.mark.findMany({
+                where,
+                include: {
+                    subject: { select: { name: true, code: true } },
+                    section: { select: { name: true } },
+                    session: { select: { year: true } },
+                    records: true
+                },
+                skip,
+                take
+            }),
+            prisma.mark.count({ where })
+        ]);
+
+        const totalPages = Math.ceil(total / limit);
+
+        res.status(200).json({ 
+            success: true, 
+            data: marks,
+            pagination: {
+                total,
+                page,
+                limit,
+                totalPages,
+                hasNext: page < totalPages,
+                hasPrev: page > 1
             }
         });
-        res.status(200).json({ success: true, count: marks.length, data: marks });
     } catch (error) { next(error); }
 };
 

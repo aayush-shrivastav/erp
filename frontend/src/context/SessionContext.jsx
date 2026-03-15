@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { ACADEMIC_SESSIONS } from '../data/mockData';
+import { ACADEMIC_SESSIONS } from '../__tests__/mockData';
 
 const SessionContext = createContext(null);
 

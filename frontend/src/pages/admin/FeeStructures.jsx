@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Edit2, Trash2, Search, Filter } from 'lucide-react';
-import api from '../../services/api';
+import api from '../../utils/api';
 
 const FeeStructures = () => {
     const [structures, setStructures] = useState([]);

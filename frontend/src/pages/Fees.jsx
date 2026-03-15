@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Search, DollarSign, CreditCard, Receipt, FileText, TrendingUp, Wallet, CheckCircle2, AlertCircle, Clock } from 'lucide-react';
-import api from '../services/api';
+import api from '../utils/api';
 import Modal from '../components/Modal';
 
 const Fees = () => {

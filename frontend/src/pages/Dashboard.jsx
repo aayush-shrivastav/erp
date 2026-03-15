@@ -7,7 +7,7 @@ import {
     AreaChart, Area, XAxis, YAxis, CartesianGrid,
     Tooltip, ResponsiveContainer, BarChart, Bar, Legend
 } from 'recharts';
-import api from '../services/api';
+import api from '../utils/api';
 
 const Dashboard = () => {
     const [stats, setStats] = useState([

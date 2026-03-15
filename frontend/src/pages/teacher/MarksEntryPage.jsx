@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import { useBlocker } from 'react-router-dom';
+
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 import Badge from '../../components/ui/Badge';
@@ -25,7 +25,7 @@ import {
     ChevronDown,
     ChevronUp
 } from 'lucide-react';
-import { STUDENTS, SUBJECTS, RESULT_STATUS } from '../../data/mockData';
+import { STUDENTS, SUBJECTS, RESULT_STATUS } from '../../__tests__/mockData';
 import { useAuth } from '../../hooks/useAuth';
 import { useToast } from '../../hooks/useToast';
 import { storage } from '../../utils/storage';
@@ -146,11 +146,7 @@ const MarksEntryPage = () => {
          return RESULT_STATUS[activeSession.id]?.["3"]?.["3C1"]?.status === 'RESULTS_FROZEN';
     }, [activeSession.id]);
 
-    // 3.1 Unsaved Changes Blocker
-    const blocker = useBlocker(
-        ({ currentLocation, nextLocation }) =>
-            isDirty && currentLocation.pathname !== nextLocation.pathname
-    );
+
 
     // 1.5 Persistence Logic
     const STORAGE_KEY = `marks_draft_${selectedSubject}_3C1`;
@@ -401,23 +397,7 @@ const MarksEntryPage = () => {
                 </div>
             )}
 
-            {/* 3.1 Blocker Modal */}
-            <Modal
-                isOpen={blocker.state === "blocked"}
-                onClose={() => blocker.reset()}
-                title="Discard Unsaved Changes?"
-                footer={
-                    <div className="flex gap-3 w-full">
-                        <Button variant="secondary" className="flex-1" onClick={() => blocker.reset()}>Stay and Save</Button>
-                        <Button variant="secondary" className="flex-1 text-red-600 border-red-100 bg-red-50 hover:bg-red-100" onClick={() => blocker.proceed()}>Discard and Leave</Button>
-                    </div>
-                }
-            >
-                <div className="py-2 flex gap-4 text-slate-600">
-                    <AlertTriangle className="text-amber-500 shrink-0" size={24} />
-                    <p className="text-sm font-medium">You have unsaved marks entry. If you leave now, your current changes since the last save will be lost.</p>
-                </div>
-            </Modal>
+
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
                 <div className="lg:col-span-3">

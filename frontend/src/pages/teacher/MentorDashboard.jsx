@@ -26,7 +26,7 @@ import {
     Users2,
     ShieldX
 } from 'lucide-react';
-import { STUDENTS, MOCK_MENTOR_ASSIGNMENTS, FEE_DATA, MOCK_MARKS } from '../../data/mockData';
+import { STUDENTS, MOCK_MENTOR_ASSIGNMENTS, FEE_DATA, MOCK_MARKS } from '../../__tests__/mockData';
 import { useToast } from '../../hooks/useToast';
 import { useAuth } from '../../hooks/useAuth';
 import { useSession } from '../../context/SessionContext';
