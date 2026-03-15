@@ -1,0 +1,18 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://127.0.0.1:5173",
+      "localStorage": [
+        {
+          "name": "token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0MDJhZjc2LTM0OTAtNDJjNC04YjI3LWI0MDkzM2Q2YTBhMiIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzczNDk2ODI4LCJleHAiOjE3NzYwODg4Mjh9.qqU5INlf6uE0wBT4xq9OvpclT3ogb-QFOXrB_lUPFg0"
+        },
+        {
+          "name": "user",
+          "value": "{\"_id\":\"2402af76-3490-42c4-8b27-b40933d6a0a2\",\"id\":\"2402af76-3490-42c4-8b27-b40933d6a0a2\",\"email\":\"student@test.com\",\"role\":\"STUDENT\"}"
+        }
+      ]
+    }
+  ]
+}

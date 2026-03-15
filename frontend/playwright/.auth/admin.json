@@ -1,0 +1,18 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://127.0.0.1:5173",
+      "localStorage": [
+        {
+          "name": "token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM1ODgxMjg0LWRhYWQtNDgzNi04YzlkLTk0YjI5MzgzMDlhNSIsInJvbGUiOiJTVVBFUl9BRE1JTiIsImlhdCI6MTc3MzQ5NjgxOSwiZXhwIjoxNzc2MDg4ODE5fQ.FuJTE2B1bVwR_Ci5HlpynQyduGNlDSG9i2weyVk4gxs"
+        },
+        {
+          "name": "user",
+          "value": "{\"_id\":\"c5881284-daad-4836-8c9d-94b2938309a5\",\"id\":\"c5881284-daad-4836-8c9d-94b2938309a5\",\"email\":\"admin@eduerp.com\",\"role\":\"SUPER_ADMIN\"}"
+        }
+      ]
+    }
+  ]
+}
